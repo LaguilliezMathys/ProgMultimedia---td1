@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bu3bv5ei4pt8p"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(1, 0.49803922, 1, 1)
+self_modulate = Color(0.9607843, 0.9607843, 0.4392157, 1)
+offset_left = 421.0
+offset_top = 87.0
+offset_right = 689.0
+offset_bottom = 136.0
+rotation = -6.2831855
+text = "       THE GREATEST BROSQUITO
+ Quentin Breakout 2000 v2 Beta XS"
