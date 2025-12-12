@@ -7,22 +7,21 @@
 [node name="Label" type="Label" parent="."]
 modulate = Color(1, 0.49803922, 1, 1)
 self_modulate = Color(0.9607843, 0.9607843, 0.4392157, 1)
-offset_left = 372.0
-offset_top = 27.0
+offset_left = 450.0
+offset_top = 116.0
 offset_right = 581.0
-offset_bottom = 76.0
+offset_bottom = 139.0
 rotation = -6.2831855
-text = "THE GREATEST BROSQUITO
- Breakout 2000 v2 Beta XS"
+text = "Play NOW !!!!!!!!"
 script = ExtResource("1_lbe1j")
 
 [node name="Label2" type="Label" parent="."]
 modulate = Color(1, 0.49803922, 1, 1)
 self_modulate = Color(0.9607843, 0.9607843, 0.4392157, 1)
-offset_left = 372.0
-offset_top = 27.0
-offset_right = 581.0
-offset_bottom = 76.0
+offset_left = 408.0
+offset_top = 34.0
+offset_right = 617.0
+offset_bottom = 83.0
 rotation = -6.2831855
 text = "THE GREATEST BROSQUITO
  Breakout 2000 v2 Beta XS"
