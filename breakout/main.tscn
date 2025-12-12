@@ -1,14 +1,29 @@
-[gd_scene format=3 uid="uid://bu3bv5ei4pt8p"]
+[gd_scene load_steps=2 format=3 uid="uid://bu3bv5ei4pt8p"]
+
+[ext_resource type="Script" uid="uid://btyqlmhasi3v5" path="res://breakout/label.gd" id="1_lbe1j"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Label" type="Label" parent="."]
 modulate = Color(1, 0.49803922, 1, 1)
 self_modulate = Color(0.9607843, 0.9607843, 0.4392157, 1)
-offset_left = 421.0
-offset_top = 87.0
-offset_right = 689.0
-offset_bottom = 136.0
+offset_left = 372.0
+offset_top = 27.0
+offset_right = 581.0
+offset_bottom = 76.0
 rotation = -6.2831855
-text = "       THE GREATEST BROSQUITO
- Quentin Breakout 2000 v2 Beta XS"
+text = "THE GREATEST BROSQUITO
+ Breakout 2000 v2 Beta XS"
+script = ExtResource("1_lbe1j")
+
+[node name="Label2" type="Label" parent="."]
+modulate = Color(1, 0.49803922, 1, 1)
+self_modulate = Color(0.9607843, 0.9607843, 0.4392157, 1)
+offset_left = 372.0
+offset_top = 27.0
+offset_right = 581.0
+offset_bottom = 76.0
+rotation = -6.2831855
+text = "THE GREATEST BROSQUITO
+ Breakout 2000 v2 Beta XS"
+script = ExtResource("1_lbe1j")
