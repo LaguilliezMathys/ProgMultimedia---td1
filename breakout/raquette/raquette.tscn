@@ -4,8 +4,5 @@
 
 [node name="Raquette" type="CharacterBody2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(376, 200)
-
 [node name="SkinRaquetteA" type="Sprite2D" parent="."]
 texture = ExtResource("1_ig4so")
