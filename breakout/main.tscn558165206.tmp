@@ -9,10 +9,10 @@
 [node name="Label" type="Label" parent="."]
 modulate = Color(1, 0.49803922, 1, 1)
 self_modulate = Color(0.9607843, 0.9607843, 0.4392157, 1)
-offset_left = 504.0
-offset_top = 240.0
-offset_right = 635.0
-offset_bottom = 263.0
+offset_left = 452.0
+offset_top = 202.0
+offset_right = 583.0
+offset_bottom = 225.0
 rotation = -6.2831855
 text = "Play NOW !!!!!!!!"
 script = ExtResource("1_lbe1j")
@@ -20,10 +20,10 @@ script = ExtResource("1_lbe1j")
 [node name="Label2" type="Label" parent="."]
 modulate = Color(1, 0.49803922, 1, 1)
 self_modulate = Color(0.9607843, 0.9607843, 0.4392157, 1)
-offset_left = 472.0
-offset_top = 80.0
-offset_right = 681.0
-offset_bottom = 181.0
+offset_left = 408.0
+offset_top = 34.0
+offset_right = 617.0
+offset_bottom = 108.61984
 rotation = -6.2831855
 text = "THE GREATEST BROSQUITO
  Breakout 2000 v2 Beta XS
@@ -32,7 +32,7 @@ text = "THE GREATEST BROSQUITO
 script = ExtResource("1_lbe1j")
 
 [node name="Raquette" parent="." instance=ExtResource("2_wn5gu")]
-position = Vector2(552, 600)
+position = Vector2(539, 466)
 
 [node name="Control Joueur" type="Node" parent="Raquette"]
 script = ExtResource("3_qj53f")

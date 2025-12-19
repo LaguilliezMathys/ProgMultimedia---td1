@@ -3,11 +3,11 @@ extends Node
 @export var speed = 400
 
 
-func get_input():
-	var raquette : CharacterBody2D = get_node("..")
-	var input_direction = Input.get_vector("left", "right", "up", "down")
-	raquette.velocity = input_direction * speed
-
 func _physics_process(delta):
-	get_input()
-	move_and_slide()
+	var raquette : CharacterBody2D = get_parent()
+	if Input.action_press("p1_left"):
+		raquette.velocity.x =  speed
+	elif Input.action_press("p1_right"):
+			raquette.velocity.y = -speed
+	
+	raquette.move_and_slide()
