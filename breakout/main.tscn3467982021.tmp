@@ -1,15 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bu3bv5ei4pt8p"]
+[gd_scene load_steps=4 format=3 uid="uid://bu3bv5ei4pt8p"]
 
 [ext_resource type="Script" uid="uid://btyqlmhasi3v5" path="res://breakout/label.gd" id="1_lbe1j"]
 [ext_resource type="PackedScene" uid="uid://ufyybas0eq43" path="res://breakout/raquette/raquette.tscn" id="2_wn5gu"]
 [ext_resource type="Script" uid="uid://xboliteiomnn" path="res://breakout/control_joueur.gd" id="3_qj53f"]
-[ext_resource type="PackedScene" uid="uid://bpo2m4bgrk4r4" path="res://breakout/Balle/balle.tscn" id="4_kgdm5"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kgdm5"]
-size = Vector2(64, 20)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_p1e6k"]
-radius = 8.0
 
 [node name="Node2D" type="Node2D"]
 
@@ -39,16 +32,8 @@ text = "THE GREATEST BROSQUITO
 script = ExtResource("1_lbe1j")
 
 [node name="Raquette" parent="." instance=ExtResource("2_wn5gu")]
-position = Vector2(544, 600)
+position = Vector2(552, 600)
 
 [node name="Control Joueur" type="Node" parent="Raquette"]
 script = ExtResource("3_qj53f")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Raquette"]
-shape = SubResource("RectangleShape2D_kgdm5")
-
-[node name="Balle" parent="." instance=ExtResource("4_kgdm5")]
-position = Vector2(552, 416)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Balle"]
-shape = SubResource("CircleShape2D_p1e6k")
+speed = null

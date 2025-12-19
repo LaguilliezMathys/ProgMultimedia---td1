@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpo2m4bgrk4r4"]
+
+[ext_resource type="Texture2D" uid="uid://1n8g6pclck3c" path="res://breakout/Balle/balle.tres" id="1_vqs3r"]
+
+[node name="RigidBody2D" type="RigidBody2D"]
+position = Vector2(32, 16)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_vqs3r")
