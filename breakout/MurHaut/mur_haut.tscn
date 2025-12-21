@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://b8qgv5av2vnhj"]
+
+[ext_resource type="Texture2D" uid="uid://8et8eba4dqe3" path="res://assets/breakout_pieces.png" id="1_hcjp0"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_hcjp0"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o1hms"]
+atlas = ExtResource("1_hcjp0")
+region = Rect2(48, 72, 64, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2m8ul"]
+size = Vector2(1154, 20)
+
+[node name="MurHaut" type="StaticBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_hcjp0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576.09344, 7.905613)
+rotation = -0.000380449
+scale = Vector2(17.99667, 1.5)
+texture = SubResource("AtlasTexture_o1hms")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(575, 8)
+shape = SubResource("RectangleShape2D_2m8ul")

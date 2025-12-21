@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://cotnxnicvffrs"]
+
+[ext_resource type="Texture2D" uid="uid://8et8eba4dqe3" path="res://assets/breakout_pieces.png" id="1_1mw5o"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1mw5o"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mocg6"]
+atlas = ExtResource("1_1mw5o")
+region = Rect2(48, 72, 64, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5e8q8"]
+size = Vector2(18, 650)
+
+[node name="MurGauche" type="StaticBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_1mw5o")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(7.0654364, 323.9324)
+rotation = 1.567689
+scale = Vector2(10.122934, 1)
+texture = SubResource("AtlasTexture_mocg6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(7, 323)
+shape = SubResource("RectangleShape2D_5e8q8")

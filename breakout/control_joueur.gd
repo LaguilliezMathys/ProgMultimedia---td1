@@ -1,20 +1,22 @@
 extends Node
 
-@export var speed = 400
+@export var speed := 400.0
+@export var half_width := 60.0 # ajuste selon la taille de ta raquette
 
+func _physics_process(delta: float) -> void:
+	var raquette := get_parent() as Node2D
+	if raquette == null:
+		return
 
-func _physics_process(delta):
-	var raquette : CharacterBody2D = get_parent()
-	
-	raquette.velocity.y = 0
-	raquette.velocity.x = 0
-	
-	 
-	
-	
+	var dir := 0.0
 	if Input.is_action_pressed("p1_left"):
-		raquette.velocity.x =  -speed
+		dir = -1.0
 	elif Input.is_action_pressed("p1_right"):
-		raquette.velocity.x = speed
-	
-	raquette.move_and_slide()
+		dir = 1.0
+
+	# Déplacement horizontal (fonctionne pour StaticBody2D et CharacterBody2D)
+	raquette.position.x += dir * speed * delta
+
+	# Clamp écran
+	var viewport_w := raquette.get_viewport_rect().size.x
+	raquette.position.x = clamp(raquette.position.x, half_width, viewport_w - half_width)
