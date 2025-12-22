@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqueeamrhkx61"]
+
+[ext_resource type="Texture2D" uid="uid://saiqp3hqofqk" path="res://assets/more_breakout_pieces.png" id="1_gmbj6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y8g86"]
+size = Vector2(80, 18)
+
+[node name="Brique" type="RigidBody2D" groups=["brique"]]
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_gmbj6")
+region_enabled = true
+region_rect = Rect2(862.2583, 319.12097, 82.91675, 17.62796)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_y8g86")

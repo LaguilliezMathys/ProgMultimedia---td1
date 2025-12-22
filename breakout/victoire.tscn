@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqxn17bts1nv7"]
+
+[ext_resource type="Script" uid="uid://j3n06k7reibx" path="res://breakout/game_over.gd" id="1_7y8al"]
+[ext_resource type="AudioStream" uid="uid://dt0fpmvqp8b2c" path="res://assets/Juhani Junkala [Retro Game Music Pack] Title Screen.wav" id="2_ey2qi"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7y8al"]
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_7y8al")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -1.0
+offset_right = 1156.0
+offset_bottom = 655.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 522.0
+offset_top = 266.0
+offset_right = 650.0
+offset_bottom = 300.0
+text = "          Gagné ! "
+label_settings = SubResource("LabelSettings_7y8al")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 463.0
+offset_top = 371.0
+offset_right = 703.0
+offset_bottom = 446.0
+text = "Rejouer"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ey2qi")
+autoplay = true

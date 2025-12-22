@@ -1,55 +1,234 @@
-[gd_scene load_steps=8 format=3 uid="uid://bu3bv5ei4pt8p"]
+[gd_scene load_steps=7 format=3 uid="uid://cx1tlfl8s5irx"]
 
-[ext_resource type="Script" uid="uid://btyqlmhasi3v5" path="res://breakout/label.gd" id="1_lbe1j"]
-[ext_resource type="PackedScene" uid="uid://ufyybas0eq43" path="res://breakout/raquette/raquette.tscn" id="2_wn5gu"]
-[ext_resource type="PackedScene" uid="uid://bpo2m4bgrk4r4" path="res://breakout/Balle/balle.tscn" id="4_kgdm5"]
-[ext_resource type="PackedScene" uid="uid://b8qgv5av2vnhj" path="res://breakout/MurHaut/mur_haut.tscn" id="4_l61sf"]
-[ext_resource type="PackedScene" uid="uid://cotnxnicvffrs" path="res://breakout/MurGauche/mur_gauche.tscn" id="5_y66sv"]
-[ext_resource type="PackedScene" uid="uid://df38we3n2v0" path="res://breakout/MurDroite/mur_droite.tscn" id="6_a51yj"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kgdm5"]
+[ext_resource type="PackedScene" uid="uid://d2fxc6s1yjbth" path="res://raquette/raquette.tscn" id="1_l61sf"]
+[ext_resource type="PackedScene" uid="uid://didpo4tbaipvr" path="res://balle/balle.tscn" id="2_y66sv"]
+[ext_resource type="PackedScene" uid="uid://t0hqlnwf8000" path="res://murs/murs.tscn" id="3_a51yj"]
+[ext_resource type="PackedScene" uid="uid://bn65m1r0garv8" path="res://fosse/fosse.tscn" id="4_ddpgr"]
+[ext_resource type="PackedScene" uid="uid://bqueeamrhkx61" path="res://brique/brique.tscn" id="5_uhjyb"]
+[ext_resource type="AudioStream" uid="uid://dmoqwrgjaxcpf" path="res://assets/Juhani Junkala [Retro Game Music Pack] Level 2.wav" id="6_5w8mg"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Label" type="Label" parent="."]
-modulate = Color(1, 0.49803922, 1, 1)
-self_modulate = Color(0.9607843, 0.9607843, 0.4392157, 1)
-offset_left = 504.0
-offset_top = 240.0
-offset_right = 635.0
-offset_bottom = 263.0
-rotation = -6.2831855
-text = "Play NOW !!!!!!!!"
-script = ExtResource("1_lbe1j")
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1157.0
+offset_bottom = 655.0
+color = Color(0.024991136, 0, 0.110663824, 1)
 
-[node name="Label2" type="Label" parent="."]
-modulate = Color(1, 0.49803922, 1, 1)
-self_modulate = Color(0.9607843, 0.9607843, 0.4392157, 1)
-offset_left = 472.0
-offset_top = 80.0
-offset_right = 681.0
-offset_bottom = 181.0
-rotation = -6.2831855
-text = "THE GREATEST BROSQUITO
- Breakout 2000 v2 Beta XS
-                       of
-                 QUENTIN"
-script = ExtResource("1_lbe1j")
+[node name="Raquette" parent="." instance=ExtResource("1_l61sf")]
+position = Vector2(590, 539)
 
-[node name="Raquette" parent="." instance=ExtResource("2_wn5gu")]
-position = Vector2(552, 600)
-disable_mode = 1
-motion_mode = 1
+[node name="Balle" parent="." instance=ExtResource("2_y66sv")]
+position = Vector2(588, 341)
 
-[node name="Balle" parent="." instance=ExtResource("4_kgdm5")]
-position = Vector2(552, 416)
-disable_mode = 2
-physics_material_override = SubResource("PhysicsMaterial_kgdm5")
+[node name="Murs" parent="." instance=ExtResource("3_a51yj")]
 
-[node name="MurHaut" parent="." instance=ExtResource("4_l61sf")]
-position = Vector2(0, 8)
+[node name="Fosse" parent="." instance=ExtResource("4_ddpgr")]
 
-[node name="MurGauche" parent="." instance=ExtResource("5_y66sv")]
+[node name="Brique39" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(575, 176)
 
-[node name="MurDroite" parent="." instance=ExtResource("6_a51yj")]
-position = Vector2(-8, 0)
+[node name="Brique50" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(575, 152)
+
+[node name="Brique61" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(575, 32)
+
+[node name="Brique72" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(1058, 152)
+
+[node name="Brique83" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(1058, 79)
+
+[node name="Brique94" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(575, 54)
+
+[node name="Brique40" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(655, 176)
+
+[node name="Brique51" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(655, 152)
+
+[node name="Brique62" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(656, 32)
+
+[node name="Brique61" parent="Brique62" instance=ExtResource("5_uhjyb")]
+position = Vector2(-81, 167)
+
+[node name="Brique62" parent="Brique62" instance=ExtResource("5_uhjyb")]
+position = Vector2(0, 167)
+
+[node name="Brique63" parent="Brique62" instance=ExtResource("5_uhjyb")]
+position = Vector2(-161, 167)
+
+[node name="Brique64" parent="Brique62" instance=ExtResource("5_uhjyb")]
+position = Vector2(-241, 167)
+
+[node name="Brique73" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(1058, 127)
+
+[node name="Brique84" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(1058, 104)
+
+[node name="Brique95" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(655, 54)
+
+[node name="Brique41" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(495, 176)
+
+[node name="Brique52" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(495, 152)
+
+[node name="Brique63" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(495, 32)
+
+[node name="Brique74" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(90, 150)
+
+[node name="Brique85" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(91, 128)
+
+[node name="Brique96" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(495, 54)
+
+[node name="Brique42" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(415, 176)
+
+[node name="Brique53" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(415, 152)
+
+[node name="Brique64" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(415, 32)
+
+[node name="Brique75" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(91, 79)
+
+[node name="Brique86" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(91, 103)
+
+[node name="Brique97" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(415, 54)
+
+[node name="Brique43" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(335, 176)
+
+[node name="Brique54" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(335, 152)
+
+[node name="Brique65" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(335, 128)
+
+[node name="Brique87" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(335, 79)
+
+[node name="Brique98" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(335, 54)
+
+[node name="Brique44" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(255, 176)
+
+[node name="Brique55" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(255, 152)
+
+[node name="Brique66" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(255, 128)
+
+[node name="Brique77" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(255, 104)
+
+[node name="Brique88" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(255, 79)
+
+[node name="Brique99" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(255, 54)
+
+[node name="Brique45" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(175, 176)
+
+[node name="Brique56" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(175, 152)
+
+[node name="Brique67" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(175, 128)
+
+[node name="Brique78" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(175, 104)
+
+[node name="Brique89" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(175, 79)
+
+[node name="Brique100" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(175, 54)
+
+[node name="Brique46" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(735, 176)
+
+[node name="Brique57" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(735, 152)
+
+[node name="Brique68" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(735, 128)
+
+[node name="Brique90" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(735, 79)
+
+[node name="Brique101" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(735, 54)
+
+[node name="Brique47" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(815, 176)
+
+[node name="Brique58" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(815, 152)
+
+[node name="Brique69" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(815, 128)
+
+[node name="Brique80" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(815, 104)
+
+[node name="Brique91" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(815, 79)
+
+[node name="Brique102" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(815, 54)
+
+[node name="Brique48" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(895, 176)
+
+[node name="Brique59" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(895, 152)
+
+[node name="Brique70" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(895, 128)
+
+[node name="Brique81" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(895, 104)
+
+[node name="Brique92" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(895, 79)
+
+[node name="Brique103" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(895, 54)
+
+[node name="Brique49" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(975, 176)
+
+[node name="Brique60" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(975, 152)
+
+[node name="Brique4536" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(975, 128)
+
+[node name="Brique562353" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(975, 104)
+
+[node name="Briques51651" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(975, 79)
+
+[node name="Brique" parent="." instance=ExtResource("5_uhjyb")]
+position = Vector2(975, 54)
+
+[node name="Musique" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_5w8mg")
+volume_db = -33.356
+autoplay = true
