@@ -24,4 +24,4 @@ func _on_body_entered(body):
 		$SonRaquette.play()
 
 func changer_scene():
-	get_tree().change_scene_to_file("res://cassebrique/victoire.tscn")
+	get_tree().change_scene_to_file("res://breakout/victoire.tscn")

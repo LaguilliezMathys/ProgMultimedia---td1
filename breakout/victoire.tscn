@@ -12,26 +12,25 @@ script = ExtResource("1_7y8al")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = -1.0
-offset_right = 1156.0
+offset_right = 1157.0
 offset_bottom = 655.0
-color = Color(0, 0, 0, 1)
+color = Color(0.024991136, 0, 0.110663824, 1)
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 522.0
-offset_top = 266.0
-offset_right = 650.0
-offset_bottom = 300.0
+offset_left = 504.0
+offset_top = 272.0
+offset_right = 608.0
+offset_bottom = 306.0
 text = "          Gagné ! "
 label_settings = SubResource("LabelSettings_7y8al")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 463.0
-offset_top = 371.0
-offset_right = 703.0
-offset_bottom = 446.0
+offset_left = 464.0
+offset_top = 448.0
+offset_right = 704.0
+offset_bottom = 523.0
 text = "Rejouer"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

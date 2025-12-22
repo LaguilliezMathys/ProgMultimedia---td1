@@ -3,13 +3,13 @@
 [ext_resource type="Script" uid="uid://nc3aucymjqwl" path="res://fosse/node.gd" id="1_yg5ki"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7hnwi"]
-size = Vector2(1323, 43.25)
+size = Vector2(1323, 248.25)
 
 [node name="Fosse" type="Area2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(585, 637.375)
+position = Vector2(585, 739.875)
 shape = SubResource("RectangleShape2D_7hnwi")
 
-[node name="Node" type="Node" parent="."]
+[node name="gameOver" type="Node" parent="."]
 script = ExtResource("1_yg5ki")

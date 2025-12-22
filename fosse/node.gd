@@ -11,4 +11,4 @@ func _on_balle_entree(body):
 	if body.is_in_group("balle"):
 		print("Perdu !")
 
-		get_tree().change_scene_to_file("res://cassebrique/game_over.tscn")
+		get_tree().change_scene_to_file("res://breakout/game_over.tscn")
